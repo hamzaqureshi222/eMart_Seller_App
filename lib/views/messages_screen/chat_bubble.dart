@@ -13,15 +13,15 @@ Widget chatBubble(DocumentSnapshot data){
       margin: const EdgeInsets.only(bottom: 8),
       decoration:   BoxDecoration(
           color: data['uid']==currentUser!.uid?redColor:darkFontGrey,
-         borderRadius: data['uid']==currentUser!.uid? const BorderRadius.only(
-      topLeft:Radius.circular(20),
-      topRight:Radius.circular(20),
-      bottomLeft:Radius.circular(20),
-    ):const BorderRadius.only(
-      topLeft:Radius.circular(20),
-        topRight:Radius.circular(20),
-        bottomRight: Radius.circular(20)
-    )
+          borderRadius: data['uid']==currentUser!.uid? const BorderRadius.only(
+            topLeft:Radius.circular(20),
+            topRight:Radius.circular(20),
+            bottomLeft:Radius.circular(20),
+          ):const BorderRadius.only(
+              topLeft:Radius.circular(20),
+              topRight:Radius.circular(20),
+              bottomRight: Radius.circular(20)
+          )
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

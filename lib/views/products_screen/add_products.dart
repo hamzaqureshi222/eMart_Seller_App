@@ -23,7 +23,11 @@ class AddProduct extends StatelessWidget {
             controller.isloading(true);
             await controller.uploadImages();
             await  controller.uploadProduct(context);
-              Get.back();
+            controller.pnameController.clear();
+            controller.pdescController.clear();
+            controller.ppriceController.clear();
+            controller.pquantityController.clear();
+            Get.back();
             }, child: boldText(text: 'Save',size: 16.0,color: white))
           ],
         ),

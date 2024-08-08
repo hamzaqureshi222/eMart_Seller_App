@@ -16,13 +16,9 @@ class HomeController extends GetxController{
      var n=await firestore.collection(vendorsCollection).where('id',isEqualTo:currentUser!.uid).get().then((value){
        if(value.docs.isNotEmpty){
          return value.docs.single['name'];
-       }else {
-         return null; // Return null if the document is not found
        }
      });
      username=n;
-     if (kDebugMode) {
-       print(username);
-     }
+     return username;
    }
 }
